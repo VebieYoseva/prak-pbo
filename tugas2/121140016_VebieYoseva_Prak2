@@ -1,0 +1,28 @@
+class Mahasiswa:
+    prodi = "Teknik Informatika"
+    
+    def __init__(self, nama, nim,kelas, sks):
+        self.nama = nama
+        self.nim = nim
+        self.kelas = kelas
+        self. sks = sks
+
+    def praktikum(self):
+        print("Mahasiswa hadir praktikum PBO :")
+
+    def biodata(self):
+        print("Nama            : ", self.nama)
+        print("NIM             : ", self.nim)
+        print("Kelas di siakad : ", self.kelas)
+        print("Jumlah sks      : ", self.sks)
+
+data = Mahasiswa("Vebie Yoseva Theresia Pasaribu", 121140016, "RB", 4)
+
+data.praktikum()
+print (" ")
+print(data.prodi)
+print (" ")
+data.biodata()
+
+
+
