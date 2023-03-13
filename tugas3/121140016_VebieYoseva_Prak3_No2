@@ -1,0 +1,28 @@
+class Hotel:
+    __list = [] #merupakan atribut privat yang hanya dapat diakses oleh Hotel
+
+    def __init__(self, nama, nohp, usia, kamar):
+        self.__nama = nama #atribut privat
+        self._no_handphone = nohp #atribut protected
+        self.usia = usia #atribut public
+        self._kamar = kamar
+        Hotel.__list.append(self.__nama)
+
+    def _ganti_kamar(self,change):
+        self._kamar = change
+
+    def pelanggan(self):
+        print("Nama Pelanggan :", self.__nama)
+        print("Nomor Handphone :", self._no_handphone)
+        print ("Usia :", self.usia, "tahun")
+        print("Jenis kamar: ",self._kamar)
+        
+Pelanggan1 = Hotel("Vebie Yoseva", "082172810603", 27, "single room")
+Pelanggan2 = Hotel("Lili Bebed", "089754325432", 20 , "double room")
+Pelanggan3 = Hotel("Bebey Gabs", "081234567856", 36 , "family room")
+
+Pelanggan1.pelanggan()
+print()
+Pelanggan1._ganti_kamar("Deluxe room")
+print()
+Pelanggan1.pelanggan()
